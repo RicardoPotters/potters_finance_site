@@ -465,6 +465,8 @@ a:focus-visible {
   .service-card, .service-card + .service-card,
   .service-card:nth-child(n+4) { grid-column: auto; padding: 26px 0; border-left: 0; }
   .service-card:nth-child(n+2) { border-top: 1px solid var(--line); }
+  .service-card:nth-child(-n+3),
+  .service-card:nth-child(n+4) { grid-column: 1 / -1; }
   .card-index { margin-bottom: 22px; }
   .approach-list article { grid-template-columns: 32px 1fr; gap: 12px; }
   .profile-section { grid-template-columns: 1fr; gap: 28px; }
