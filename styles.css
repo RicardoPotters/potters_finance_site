@@ -270,10 +270,17 @@ h1 span { color: var(--bronze); }
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
+
+.service-card:nth-child(-n+3) { grid-column: span 2; }
+.service-card:nth-child(n+4) {
+  grid-column: span 3;
+  border-top: 1px solid var(--line);
+}
+.service-card:nth-child(4) { padding-left: 0; border-left: 0; }
 
 .service-card {
   min-height: 310px;
@@ -456,7 +463,9 @@ a:focus-visible {
   .section { padding: 82px 22px; }
   .section-heading h2, .approach-heading h2, .profile-copy h2, .contact-card h2 { font-size: clamp(2.6rem, 11vw, 3.6rem); }
   .service-grid { grid-template-columns: 1fr; }
-  .service-card, .service-card + .service-card { padding: 26px 0; border-left: 0; }
+  .service-card, .service-card + .service-card,
+  .service-card:nth-child(n+4) { grid-column: auto; padding: 26px 0; border-left: 0; }
+  .service-card:nth-child(n+2) { border-top: 1px solid var(--line); }
   .card-index { margin-bottom: 22px; }
   .approach-list article { grid-template-columns: 32px 1fr; gap: 12px; }
   .profile-section { grid-template-columns: 1fr; gap: 28px; }
