@@ -217,7 +217,7 @@ h1 span { color: var(--bronze); }
 .expertise-nav a {
   display: grid;
   min-height: 76px;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 18px;
   padding: 16px clamp(16px, 2.2vw, 34px);
@@ -231,7 +231,6 @@ h1 span { color: var(--bronze); }
 .expertise-nav a:hover,
 .expertise-nav a:focus-visible { background: rgba(178, 154, 108, 0.12); }
 .expertise-number { color: var(--bronze); font-size: 0.68rem; letter-spacing: 0.14em; }
-.nav-arrow { color: var(--bronze); font-size: 1.1rem; }
 
 .section {
   width: min(1280px, 100%);
